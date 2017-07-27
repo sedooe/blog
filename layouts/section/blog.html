@@ -1,0 +1,23 @@
+{{ template "theme/chrome/head.html" . }}
+  <body>
+
+{{ template "theme/chrome/sidebar.html" . }}
+
+    <div class="content container">
+      <h1 class="title">Blog Posts</h1>
+      <h2 class="title">in English</h2>
+      <ul class="posts">
+        {{ range .Data.Pages }}
+        <li><span>{{if .Draft}}[draft] {{end}}<a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
+        {{ end }}
+      </ul>
+
+    </br>
+      <h2 class="title">in Turkish</h2>
+      <ul class="posts">
+        <li><span><a href="https://medium.com/kodgemisi/spring-boot-ile-%C3%B6rnek-web-uygulamas%C4%B1-914c94c9099f">Spring Boot ile Örnek Web Uygulaması</a><time class="pull-right post-list">Sun, Aug 25, 2015</h4></time></span></span></li>
+      </ul>
+    </div>
+
+  </body>
+</html>

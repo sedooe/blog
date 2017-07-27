@@ -1,0 +1,26 @@
+languageCode = "en-us"
+title = "sedooe"
+theme = "hyde"
+baseurl = "http://sedooe.github.io"
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+canonifyurls = true
+
+[Author]
+	name = "Sedat Gokcen"
+
+[Permalinks]
+	blog = "/:year/:month/:filename/"
+
+[Taxonomies]
+	tag = "tags"
+	series = "series"
+	series-desc = "series-desc"
+
+[params]
+	description = "mostly java stuff"
+	linkedin = "https://www.linkedin.com/in/sedatgokcen"
+	twitter = "https://twitter.com/gokcensedat"
+	github = "https://github.com/sedooe"
+	disqus = "sedooe"
