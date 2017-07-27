@@ -1,3 +1,4 @@
 [submodule "public"]
 	path = public
 	url = git@github.com:sedooe/sedooe.github.io.git
+	branch = master
