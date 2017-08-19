@@ -3,6 +3,7 @@ date = "2016-04-16"
 title = "REST Authentication using Spring Security & Spring Session"
 type = "post"
 ogtype = "article"
+images = ["/img/spring.png"]
 +++
 
 In this post, I will try to demonstrate how easily we can implement an authentication mechanism for REST services using Spring Security and Spring Session with the help of Redis.

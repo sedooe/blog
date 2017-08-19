@@ -3,6 +3,7 @@ date = "2017-08-19"
 title = "Tracing Requests & Responses with Spring Boot Actuator"
 type = "post"
 ogtype = "article"
+images = ["/img/spring.png"]
 +++
 
 Spring Boot Actuator is a sub-project that provides endpoints allow you to monitor and interact with your application. You can take a look at [complete list of endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#production-ready-endpoints) but we will focus on `trace` and its customization in this post.
