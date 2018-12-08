@@ -1,7 +1,7 @@
 languageCode = "en-us"
 title = "sedooe"
 theme = "hyde"
-baseurl = "https://sedooe.github.io"
+baseurl = "https://sedooe.com"
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
