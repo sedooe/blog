@@ -13,7 +13,7 @@ It's all what you need when your API does not require authentication.
 
 On the other hand, when your API requires authentication, things get a bit complicated. For example, let's say that you authenticate your API with HTTP Basic Authentication. So, consumers of this API must send an **Authorization** header which contains user credentials in their request. Since this is a [non-simple request](http://stackoverflow.com/a/10636765/3099704), **OPTIONS** request will be send firstly. The thing is that, even if you send Authorization header with correct credentials in your request, you will face something like below:
 
-![response](https://www.sedooe.com/img/options_response.png)
+![response](https://sedooe.github.io/img/options_response.png)
 
 The reason of this is, according to CORS spec, it excludes your Authorization header. Hence, you should permit OPTIONS requests in your security configuration class explicitly.
 
