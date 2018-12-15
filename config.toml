@@ -6,6 +6,7 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 canonifyurls = true
+googleAnalytics = "UA-131084860-1"
 
 [Author]
 	name = "Sedat Gokcen"
