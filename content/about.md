@@ -5,7 +5,7 @@ title = "About me"
 	weight = 1
 +++
 
-I'm a Software Developer and Software Engineering <del>student</del> graduate based in Izmir, Turkey.
+I'm a Software Developer and Software Engineering <del>student</del> graduate based in <del>Izmir, Turkey</del> Berlin, Germany.
 
 I consider myself a passionate developer. Actually, not just about software development, I'm passionate about everything I like to do. Years ago, when I was a secondary school kid, I was really passionate riddle solver until owners of my favorite riddle game shut down the website. That passion led me to create my own browser-based riddle game and so I started programming.
 
