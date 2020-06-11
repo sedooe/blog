@@ -7,6 +7,7 @@
       <h1 class="title">Blog Posts</h1>
       <h2 class="title">in English</h2>
       <ul class="posts">
+        <li><span><a href="https://mobilabsolutions.com/2020/04/a-proper-kubernetes-readiness-probe-with-spring-boot-actuator/">A Proper Kubernetes Readiness Probe with Spring Boot Actuator</a><time class="pull-right post-list">Tue, Apr 28, 2020</time></span></li>
         <li><span><a href="https://mobilabsolutions.com/2019/01/why-we-switched-to-cilium/">Why We Switched to Cilium</a><time class="pull-right post-list">Tue, Jan 22, 2019</time></span></li>
         {{ range .Data.Pages }}
         <li><span>{{if .Draft}}[draft] {{end}}<a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span></li>
