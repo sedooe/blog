@@ -17,7 +17,7 @@ By default, `trace` endpoint is enabled for all HTTP requests and shows last 100
 
 So, when you hit `/trace`, the typical response will be like:
 
-<script src="https://gist.github.com/sedooe/6ed35760c8a1388a39bc95ac1cbc2f88.js"></script>
+{{< gist sedooe 6ed35760c8a1388a39bc95ac1cbc2f88 >}}
 
 The question is: how can we customize these properties? Is there any way to exclude some of them or include even more properties? The answer is YES.
 
@@ -33,7 +33,7 @@ In the introduction part we said that it's enabled for all HTTP requests. It rea
 
 To be able to prevent those endpoints to be traced, we need to extend [`WebRequestTraceFilter`](http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/actuate/trace/WebRequestTraceFilter.html) and override its [`shouldNotFilter`](http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/filter/OncePerRequestFilter.html#shouldNotFilter-javax.servlet.http.HttpServletRequest-) method which inherited from [`OncePerRequestFilter`](http://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/filter/OncePerRequestFilter.html).
 
-<script src="https://gist.github.com/sedooe/f3e4ec1dd49bb316a5a3f94425d267f7.js"></script>
+{{< gist sedooe f3e4ec1dd49bb316a5a3f94425d267f7 >}}
 
 `shouldNotFilter`'s default implementation was always returning false. Now with this implementation, it returns **true** for the endpoints we don't want to trace.
 By annotating this class with `@Component`, we tell Spring to register it as a bean instead inherited `WebRequestTraceFilter`. No more configuration needed for this to work.
@@ -42,7 +42,7 @@ It's not over yet, we need more customization!
 
 In the introduction part we also said that, `trace` endpoint shows last 100 requests by default. Unfortunately, there is no way to change it from configuration file directly but still it's a piece of cake.
 
-<script src="https://gist.github.com/sedooe/0310f74811c6d811382c27d4d76fc2b1.js"></script>
+{{< gist sedooe 0310f74811c6d811382c27d4d76fc2b1 >}}
 
 By default, [`InMemoryTraceRepository`](http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/actuate/trace/InMemoryTraceRepository.html) is used as an implementation of [`TraceRepository`](http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/actuate/trace/TraceRepository.html). By extending it, we can expand the capacity, log requests explicitly or even persist them. It's up to you.
 

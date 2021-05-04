@@ -20,7 +20,7 @@ googleAnalytics = "UA-131084860-1"
 	series-desc = "series-desc"
 
 [params]
-	description = "mostly java stuff"
+	description = "jvm, spring, kubernetes"
 	linkedin = "https://www.linkedin.com/in/sedatgokcen"
 	twitter = "https://twitter.com/gokcensedat"
 	github = "https://github.com/sedooe"

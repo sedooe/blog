@@ -21,7 +21,7 @@ The authentication scheme that we will use:
 We will create very simple Spring Boot application which you can get source code and dependencies [here](https://github.com/sedooe/blog-projects/tree/master/rest-authentication-example).
 
 Our security configuration looks like:
-<script src="https://gist.github.com/sedooe/f143f6b615bfc1aeb23954ef514ec244.js"></script>
+{{< gist sedooe f143f6b615bfc1aeb23954ef514ec244 >}}
 
 `configureGlobal` method is pretty straightforward, we just create a user with username *sedooe* and password *password*.
 
@@ -37,7 +37,7 @@ In `httpSessionStrategy` method, Spring Session comes into play. </br>
 Thanks to `HeaderHttpSessionStrategy`, when a session is created, the HTTP response will have a response header of the specified name and the value of the session id. Default header name is **x-auth-token** and we will use it.
 
 Here is our simple controller:
-<script src="https://gist.github.com/sedooe/0f1536cfccb3024b1090fb73b895f718.js"></script>
+{{< gist sedooe 0f1536cfccb3024b1090fb73b895f718 >}}
 
 There is nothing to mention about this controller specifically so let's start trying things out.
 

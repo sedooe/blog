@@ -6,7 +6,7 @@
     <div class="content container">
 <div class="posts">
 
-      {{ range .Data.Pages }}
+      {{ range .Site.RegularPages }}
   {{ if eq .Type "post" }}
   <div class="post">
     <h1 class="post-title">

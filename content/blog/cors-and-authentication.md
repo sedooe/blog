@@ -17,7 +17,7 @@ On the other hand, when your API requires authentication, things get a bit compl
 
 The reason of this is, according to CORS spec, it excludes your Authorization header. Hence, you should permit OPTIONS requests in your security configuration class explicitly.
 
-<script src="https://gist.github.com/sedooe/5c5735ca41a96a6d7be7a73d783334ba.js"></script>
+{{< gist sedooe 5c5735ca41a96a6d7be7a73d783334ba >}}
 
 Last of all, I suggest you to read these two posts:
 

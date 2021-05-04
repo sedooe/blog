@@ -11,7 +11,7 @@ Let's say that you logged some id no of some user hundreds of times, it scattere
 
 For this case, we're gonna extend [`TurboFilter`](https://logback.qos.ch/apidocs/ch/qos/logback/classic/turbo/TurboFilter.html) and override its `decide` method.
 
-<script src="https://gist.github.com/sedooe/a1658c2fb7ae89084b2f21457321f0e2.js"></script>
+{{< gist sedooe a1658c2fb7ae89084b2f21457321f0e2 >}}
 
 If the log matches our criteria and we want to change it, we deny it by returning `FilterReply.DENY` and log again with the changed object.
 
@@ -19,4 +19,4 @@ Here, I used `info` as log level for the sake of simplicity but if you don't wan
 
 It's that easy once you deal with recursion and not forget to declare your custom filter in configuration file properly.
 
-<script src="https://gist.github.com/sedooe/97f93f124dae080c9d958d1689c1697e.js"></script>
+{{< gist sedooe 97f93f124dae080c9d958d1689c1697e >}}
