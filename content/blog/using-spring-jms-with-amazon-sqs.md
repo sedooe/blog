@@ -22,7 +22,7 @@ What happens if you still can't process message successfully and can't delete th
 
 So you found [this](https://aws.amazon.com/blogs/developer/using-amazon-sqs-with-spring-boot-and-spring-jms/) blog post for this integration and realize that SQS even has its own [JMS library](https://github.com/awslabs/amazon-sqs-java-messaging-lib) which you can integrate with Spring JMS, nice! 
 
-When you apply the very same config in the blog post above, if you have an error and your JMS Listener throws an exception during message processing, you'll see that visibility timeout is not respected at all, and retry kicks in immediately. In [this GitHub issue](https://github.com/awslabs/amazon-sqs-java-messaging-lib/issues/75), you can find why that's happening.
+When you apply the very same config in the blog post above, if you have an error and your JMS Listener throws an exception during message processing, you'll see that visibility timeout is not respected at all, and retry kicks in immediately. In [this GitHub issue](https://github.com/awslabs/amazon-sqs-java-messaging-lib/issues/75), you can find why that's happening, and [here](https://stackoverflow.com/a/64394381/3099704) you can find my hacky solution for it.
 
 Basically, when you use `CLIENT_ACKNOWLEDGE` mode, if your listener method throws an exception, SQS JMS library changes that message's visibility timeout to 0, so that message becomes visible immediately. This is not what we want, we all know that immediate retries often trouble rather than a cure for any problem.
 
